@@ -1,0 +1,10 @@
+services:
+  bookstore:
+    image: bookstore
+    build: 
+      context: .
+      args:
+        PLATFORM: arm64
+        BASE_IMG: alpine:3.20.3
+    ports:
+      - "5000:5000"
